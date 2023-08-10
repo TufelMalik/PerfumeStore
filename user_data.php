@@ -1,6 +1,6 @@
 <?php
-
 function SignInTheUser() {
+    session_start();
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $etMobileNum = $_POST['etNumLogin'];
         $etPassword = $_POST['etPassLogin'];
@@ -20,7 +20,20 @@ function SignInTheUser() {
         $result = $con->query($selectQry);
 
         if ($result->num_rows > 0) {
-            echo "Login successful.";
+            $userData = $result->fetch_assoc();
+            $userType = $userData['Status'];
+
+            if ($userType === "Admin") {
+                $_SESSION['userRole'] = 'Admin';
+                $con->close();
+                header("Location: AdminPage.php");
+                exit();
+            } else {
+                $_SESSION['userRole'] = 'customer';
+                $con->close();
+                header("Location: HomePage.php");
+                exit();
+            }
         } else {
             echo "Login failed. Invalid credentials.";
         }
@@ -33,6 +46,8 @@ function SignUpTheUser() {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $etMobileNum = $_POST['etMobileReg'];
         $etPassword = $_POST['etPassReg'];
+        $userType = $_POST['userRole'];    
+        session_start();  
 
         $host_name = "localhost";
         $user_name = "root";
@@ -45,15 +60,22 @@ function SignUpTheUser() {
             die("Connection failed: " . $con->connect_error);
         }
 
-        // Assuming 'Status' is a column in your table 'users'
-        $newAdmin = "Admin";
-
-        // Use backticks for table and column names, not single quotes
         $insertQry = "INSERT INTO `users` (`MobileNum`, `Password`, `Status`)
-         VALUES ('$etMobileNum', '$etPassword', '$newAdmin')";
+         VALUES ('$etMobileNum', '$etPassword', '$userType')";
         
         if ($con->query($insertQry) === TRUE) {
-            echo "Data inserted successfully.";
+            if(isset($_POST['userRole'])){
+                $selectedType = $userType;
+                if($selectedType === "admin"){
+                    $con->close();
+                    header("Location: AdminPage.php");
+                    exit();
+                }else{
+                    $con->close();
+                    header("Location: HomePage.php");
+                    exit();
+                }
+            }
         } else {
             echo "Error: " . $con->error;
         }
@@ -61,6 +83,7 @@ function SignUpTheUser() {
         $con->close();
     }
 }
+
 // Call functions based on actions
 if (isset($_POST['btnSignIn'])) {
     SignInTheUser();
@@ -69,5 +92,4 @@ if (isset($_POST['btnSignIn'])) {
 if (isset($_POST['btnSignUp'])) {
     SignUpTheUser();
 }
-
 ?>

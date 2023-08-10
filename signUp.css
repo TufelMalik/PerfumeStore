@@ -167,3 +167,47 @@ footer {
 .login-form select option {
     padding: 5px;
 }
+
+/*
+    Radio Button
+*/
+/* Style for the radio button container */
+.container {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    margin-right: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+  }
+  
+  /* Hide the default radio button */
+  .container input[type="radio"] {
+    display: none;
+  }
+  
+  /* Style for the checkmark */
+  .checkmark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Checkmark when selected */
+  .container input[type="radio"]:checked + .checkmark {
+    border-color: #2196F3;
+    background-color: #2196F3; /* Add a background color to the checkmark */
+  }
+  
+  /* Checkmark when hovered */
+  .container:hover .checkmark {
+    border-color: #999;
+  }
+  

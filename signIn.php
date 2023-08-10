@@ -27,10 +27,6 @@
                 <form class="login-form" method="post" action="user_data.php">
                     <input type="text" name="etNumLogin" placeholder="Mobile Number" required/>
                     <input type="password" name="etPassLogin" placeholder="password" required/>
-                    <select name="userRole" class="select-style">
-                        <option id="select_" value="admin">Admin</option>
-                        <option value="customer">Customer</option>
-                    </select>
                     <button name="btnSignIn" type="submit">login</button>
                     <br>
                     <p class="message">Not registered? <a href="signUp.php">Create an account</a></p>
