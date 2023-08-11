@@ -6,6 +6,7 @@ function addProductData() {
         $etPPrice = $_POST['etPPrice'];
         $etPML = $_POST['etPML'];
         $etImg = $_POST['selectedImageName'];
+        $etFor = $_POST['etFor'];
         
         $host_name = "localhost";
         $user_name = "root";
@@ -18,8 +19,8 @@ function addProductData() {
             die("Connection failed: " . $con->connect_error);
         }
 
-        $insertProduct = "INSERT INTO `product` (`pImg`, `pName`, `pPrice`, `pML`)
-        VALUES ('$etImg', '$etPName', '$etPPrice', '$etPML')";
+        $insertProduct = "INSERT INTO `product` (`pImg`, `pName`, `pPrice`, `pML`,'For')
+        VALUES ('$etImg', '$etPName', '$etPPrice', '$etPML','$etFor)";
 
         if ($con->query($insertProduct) === true) {
             echo "Inserted";

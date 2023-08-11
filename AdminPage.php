@@ -21,6 +21,7 @@
             <input type="text" name="etPName" placeholder="Perfume Name" />
             <input type="text" name="etPPrice" placeholder="Perfume Price" />
             <input type="text" name="etPML" placeholder="ml ?" />
+            <input type="text" name="etFor" placeholder="Men or Women ?" />
 
         
             <button type="submit" name="btnAddData">Add Perfume</button>
