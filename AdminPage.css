@@ -1,16 +1,17 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #121010;
     margin: 0;
     padding: 0;
 }
+
 
 .addData {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    max-width: 400px;
+    max-width: 300px;
     margin: 50px auto;
 }
 
@@ -58,12 +59,8 @@ body {
 }
 
 
-.product-image {
-    text-align: center;
-  }
-  
   .product-image img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: inline-block;
     margin-top: 15px;
