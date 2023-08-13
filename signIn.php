@@ -26,8 +26,8 @@
                 </div>
                 <form class="login-form" method="post" action="user_data.php">
                     <input type="text" name="etNumLogin" placeholder="Mobile Number" required/>
-                    <input type="password" name="etPassLogin" placeholder="password" required/>
-                    <button name="btnSignIn" type="submit">login</button>
+                    <input type="password" name="etPassLogin" placeholder="Password" required/>
+                    <button name="btnSignIn" type="submit">Login</button>
                     <br>
                     <p class="message">Not registered? <a href="signUp.php">Create an account</a></p>
                 </form>

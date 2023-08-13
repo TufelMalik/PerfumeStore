@@ -19,8 +19,9 @@ function addProductData() {
             die("Connection failed: " . $con->connect_error);
         }
 
-        $insertProduct = "INSERT INTO `product` (`pImg`, `pName`, `pPrice`, `pML`,'For')
-        VALUES ('$etImg', '$etPName', '$etPPrice', '$etPML','$etFor)";
+
+       $insertProduct = "INSERT INTO `product` (`pImg`, `pName`, `pPrice`, `pML`, `For`)
+        VALUES ('$etImg', '$etPName', '$etPPrice', '$etPML', '$etFor')";
 
         if ($con->query($insertProduct) === true) {
             echo "Inserted";

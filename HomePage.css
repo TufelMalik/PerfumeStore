@@ -1,3 +1,46 @@
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Your global styles here */
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+  color: #e44d26;
+}
+
 .product-card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -49,23 +92,24 @@
 }
 
 .product-name {
-  font-size: 14px;
+  font-size: 19px;
   color: #333;
-  margin-top: 5px;
+  margin-top: 10px;
   flex-grow: 1;
   display: flex;
-  align-items: center;
+  justify-content: flex-end; /* Align to the right */
 }
 
 .product-price {
-  font-size: 12px;
-  color: #888;
+  font-size: 15px;
+  color: #212121;
   margin-top: 5px;
+  text-align: right; /* Align price to the right */
 }
 
 .product-category {
   font-size: 10px;
-  color: #666;
+  color: #212121;
   margin-top: 5px;
 }
 

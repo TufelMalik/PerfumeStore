@@ -12,8 +12,10 @@
     <nav>
         <ul>
             <li><a href="#">Dashboard</a></li>
-            <li><a href="HomePage.php">Products</a></li>
+            <li><a href="#">Products</a></li>
             <li><a href="#">Orders</a></li>
+            <li><a href="signUp.php">SignUp</a></li>
+            <li><a href="signIn.php">SignIn</a></li>
         </ul>
     </nav>
 </header>
@@ -22,13 +24,14 @@
         <?php
         include 'HomeData.php';
         $homeData = new HomeData(); 
-        $homeData->getAllProducts("Admin");
-        $homeData->getAllProducts("Admin");
-        $homeData->getAllProducts("Admin");
-        $homeData->getAllProducts("Admin");
-        $homeData->getAllProducts("Admin");
-        $homeData->getAllProducts("Admin");
-       ?>
+        $homeData->getAllProducts("Guest");
+        $homeData->getAllProducts("Guest");
+        $homeData->getAllProducts("Guest");
+        $homeData->getAllProducts("Guest");
+        $homeData->getAllProducts("Guest");
+        $homeData->getAllProducts("Guest");
+        $homeData->getAllProducts("Guest");
+        ?>
     </div>
 </main>
 <footer>
