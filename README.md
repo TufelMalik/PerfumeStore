@@ -1,5 +1,7 @@
                 				Perfume Store Website
-        Welcome to the Perfume Store Website! This is a simple web application designed to showcase a collection of perfumes. Users can browse and view perfume names and images without authentication, but after logging in, they gain access to additional details like prices and whether the perfume is for Men or Women.
+        Welcome to the Perfume Store Website! This is a simple web application designed to showcase a collection of perfumes.
+Users can browse and view perfume names and images without authentication, but after logging in, they gain access to additional
+details like prices and whether the perfume is for Men or Women.
 
 >> Table of Contents :
 * Features
