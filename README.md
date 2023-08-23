@@ -3,7 +3,8 @@
 Users can browse and view perfume names and images without authentication, but after logging in, they gain access to additional
 details like prices and whether the perfume is for Men or Women.
 
->> Table of Contents :
+ 
+ #Table of Contents :
 * Features
 Getting Started
 Usage
@@ -34,7 +35,7 @@ Register: Click on the "Register" link on the login page to create a new account
 
 Login: After registering, use your credentials to log in.
 
->> Viewing Perfumes
+ Viewing Perfumes
 All Users: Perfume names and images are visible to all users on the homepage.
 
 Authenticated Users: Once logged in, you can click on individual perfumes to view additional details, including prices and whether they are for Men or Women.
