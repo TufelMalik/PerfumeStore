@@ -19,7 +19,7 @@ Getting Started
 To get started with this project, you'll need the following:
 
 1) Clone the Repository: Clone this GitHub repository to your local machine using the following command:
-          $ git clone https://github.com/yourusername/perfume-store.git
+          $ git clone https://github.com/TufelMalik/perfume-store.git
 2) Install Dependencies: Make sure you have the necessary dependencies installed. You can do this by running:
         $ npm install
 3) Set Up a Database: Configure a database to store user accounts and perfume information. You can use a database like MySQL, MongoDB, or PostgreSQL. Update the database connection settings in the configuration file.
